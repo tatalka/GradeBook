@@ -10,6 +10,13 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
+            Gradebook gradeBook = new Gradebook();
+
+            gradeBook.AddGrade(13.4f);
+            gradeBook.AddGrade(13.1f);
+            Console.WriteLine(gradeBook.GiveMaxValue());
+
+            Console.WriteLine();
         }
     }
 }
