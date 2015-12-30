@@ -48,15 +48,18 @@ namespace GradeBook
                 if (_name != value)
                 {
                     var oldValue = _name;
-                    //.. tutaj kod wykrywajacy zmiane nazwy 
                     _name = value;
-                    // NamedChanged (oldValue, value);
+                    if (NameChanged!=null)
+                    {
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.OldValue = oldValue;
+                        args.NewValue = value;
+                        NameChanged(this, args);
+                    }
                 }
-                
             }
         }
-
+        public event NamedChangedDelegate NameChanged;
         private List<float> grades;
-
     }
 }

@@ -10,12 +10,34 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            GradeBook gradeBook = new GradeBook();
-            Console.WriteLine(gradeBook.Name); // powinno dac pusty string
+            GradeBook book = new GradeBook("Scott's Book");
+            book.AddGrade(91f);
+            book.AddGrade(89.1f);
+            book.AddGrade(75f);
 
-            GradeBook secondBook = new GradeBook("Poziomka");
-            Console.WriteLine(secondBook.Name);
+            GradeStatistics stats = book.ComputeStatistics();
 
+            Console.WriteLine(stats.LetterGrade);
+
+            book.NameChanged += OnNameChanged;
+            book.NameChanged += OnNameChanged;
+            book.NameChanged += OnNameChanged;
+            book.NameChanged += OnNameChanged2;
+
+            book.Name = "olew's book";
+            //Writenames(book.Name);
+
+            Console.WriteLine();
+        }
+
+        private static void OnNameChanged2(object sender, NameChangedEventArgs args)
+        {
+            Console.WriteLine("Name changed from {0} to {1}", args.OldValue, args.NewValue);
+        }
+
+        private static void OnNameChanged(object sender, NameChangedEventArgs args)
+        {
+            Console.WriteLine("cos innego {0}", args.ToString());
         }
     }
 }
