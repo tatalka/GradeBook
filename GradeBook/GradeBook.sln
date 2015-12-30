@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "..\UnitTestProject1\UnitTestProject1.csproj", "{F05E63FD-0041-45D6-B789-15DFFEFA99CE}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeBook", "GradeBook.csproj", "{DA5720EF-0C38-416C-BC3E-3E29A5E8D20E}"
 EndProject
 Global
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F05E63FD-0041-45D6-B789-15DFFEFA99CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F05E63FD-0041-45D6-B789-15DFFEFA99CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F05E63FD-0041-45D6-B789-15DFFEFA99CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F05E63FD-0041-45D6-B789-15DFFEFA99CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA5720EF-0C38-416C-BC3E-3E29A5E8D20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DA5720EF-0C38-416C-BC3E-3E29A5E8D20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5720EF-0C38-416C-BC3E-3E29A5E8D20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
