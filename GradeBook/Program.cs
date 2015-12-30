@@ -15,17 +15,25 @@ namespace GradeBook
             book.AddGrade(89.1f);
             book.AddGrade(75f);
 
+            book.WriteGrades(Console.Out);
+
             GradeStatistics stats = book.ComputeStatistics();
 
-            Console.WriteLine(stats.LetterGrade);
+            Console.WriteLine("{0} {1}",stats.LetterGrade, stats.Description);
 
             book.NameChanged += OnNameChanged;
             book.NameChanged += OnNameChanged;
             book.NameChanged += OnNameChanged;
             book.NameChanged += OnNameChanged2;
-
-            book.Name = "olew's book";
-            //Writenames(book.Name);
+            
+            try
+            {
+                book.Name = "";
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("zlapalem exception");
+            }
 
             Console.WriteLine();
         }

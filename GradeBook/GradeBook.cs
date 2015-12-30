@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,15 @@ namespace GradeBook
         {
             grades = new List<float>();
             Name = GradeBookName;
+        }
+
+        public void WriteGrades(TextWriter @out)
+        {
+            @out.WriteLine("Here comes the grades:");
+            foreach (var grade in grades)
+            {
+                @out.WriteLine(grade);
+            }
         }
 
         public void AddGrade (float grade)
@@ -49,6 +59,10 @@ namespace GradeBook
                 {
                     var oldValue = _name;
                     _name = value;
+                    if (String.IsNullOrEmpty(value))
+                    {
+                        throw new ArgumentException("empty name given!");
+                    }
                     if (NameChanged!=null)
                     {
                         NameChangedEventArgs args = new NameChangedEventArgs();
