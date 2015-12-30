@@ -1,6 +1,6 @@
-﻿namespace GradeBook
+﻿namespace GradeBookNamespace
 {
-    internal class GradeStatistics
+    public class GradeStatistics
     {
         public GradeStatistics()
         {

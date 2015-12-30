@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GradeBook
+namespace GradeBookNamespace
 {
     public class NameChangedEventArgs : EventArgs
     {

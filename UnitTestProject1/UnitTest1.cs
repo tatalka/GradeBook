@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GradeBook;
+using GradeBookNamespace;
 
 namespace UnitTestProject1
 {
@@ -10,7 +10,10 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            Gradebook gradeBook = new Gradebook();
+            GradeBook book = new GradeBook();
+            bool condition = false;
+            Assert.IsFalse(condition);
+           
         }
     }
 }
